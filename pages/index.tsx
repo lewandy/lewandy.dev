@@ -1,42 +1,17 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import Header from "./header";
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Lewandy Dilone Bonifacio</title>
+        <title>Lewandy Diloné Bonifacio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className={styles.header}>
-        <nav>
-          <ul
-            style={{
-              listStyle: "none",
-              cursor: "pointer",
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              justifyContent: "space-evenly",
-            }}
-          >
-            <li>
-              <a href="#home">Home</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#portfolio">Portfolio</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
+      <Header />
+      
       <main className={styles.main}>
         <h1 className={styles.title}>
           My name is <a href="https://github.com/lewandy">Lewandy Dilone</a>
