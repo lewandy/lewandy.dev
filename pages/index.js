@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
@@ -9,14 +9,40 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <header className={styles.header}>
+        <nav>
+          <ul
+            style={{
+              listStyle: "none",
+              cursor: "pointer",
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "space-evenly",
+            }}
+          >
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#portfolio">Portfolio</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
       <main className={styles.main}>
         <h1 className={styles.title}>
-          My name is  <a href="https://github.com/lewandy">Lewandy Dilone!</a>
+          My name is <a href="https://github.com/lewandy">Lewandy Dilone</a>
         </h1>
 
-        <p className={styles.description}>
-          Front end Engineer{' '}
-        </p>
+        <p className={styles.description}>Front end Engineer </p>
       </main>
 
       <footer className={styles.footer}>
@@ -25,10 +51,10 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
     </div>
-  )
+  );
 }
