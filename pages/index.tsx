@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Header from "./header";
+import Header from "./Header";
+import Main from "./Main";
 
 export default function Home() {
   return (
@@ -11,14 +12,7 @@ export default function Home() {
       </Head>
 
       <Header />
-      
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          My name is <a href="https://github.com/lewandy">Lewandy Diloné</a>
-        </h1>
-
-        <p className={styles.description}>Front end Engineer </p>
-      </main>
+      <Main />
 
       <footer className={styles.footer}>
         <a
