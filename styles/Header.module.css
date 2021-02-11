@@ -1,10 +1,23 @@
-
 .header {
   width: 100%;
   height: 60px;
   position: fixed;
   top: 0;
-  /* background: #0070f3; */
+}
+
+.scrolled {
+  /* On scroll styles */
+  animation-name: blur;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.scrolled li {
+  border-radius: 8px;
+  color: whitesmoke;
+  animation-name: effect;
+  animation-duration: 800ms;
+  animation-fill-mode: forwards;
 }
 
 .links {
@@ -16,6 +29,7 @@
 
 .links li {
   padding: 4px;
+  font-size: large;
 }
 
 .links li:hover {
@@ -27,6 +41,16 @@
 }
 
 @keyframes effect {
-  from { color: black; }
-  to {background-color: #0070f3;}
+  from {
+    color: black;
+  }
+  to {
+    background-color: #0070f3;
+  }
+}
+
+@keyframes blur {
+  to {
+    backdrop-filter: blur(5px);
+  }
 }
