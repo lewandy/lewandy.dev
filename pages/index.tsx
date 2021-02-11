@@ -4,21 +4,27 @@ import Header from "../components/Header";
 import Home from "../components/Home";
 import Footer from "../components/Footer";
 import About from "../components/About";
-import { useCallback, useEffect } from "react";
-
-const scrollEventHandler: any = () => {
-  document.addEventListener("scroll", ({ target }: any) => {
-    const scrollTopPixels: number = target.scrollingElement.scrollTop;
-
-    if (scrollTopPixels > 0) {
-      //TODO: Adding scroll menu animation
-    }
-  });
-};
+import { useCallback, useEffect, useState } from "react";
 
 export default function Layout() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
   useEffect(() => {
-    scrollEventHandler();
+    const handler = ({ target }: any) => {
+      const scrollTopPixels: number = target.scrollingElement.scrollTop;
+
+      if (scrollTopPixels > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    document.addEventListener("scroll", handler);
+
+    return () => {
+      document.removeEventListener("scroll", handler);
+    };
   }, []);
 
   return (
@@ -28,7 +34,7 @@ export default function Layout() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      <Header isScrolled={isScrolled} />
       <Home />
       <About />
       <Footer />

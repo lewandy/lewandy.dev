@@ -6,9 +6,15 @@ const linkStyles: React.CSSProperties = {
   marginRight: "4rem",
 };
 
-export default function Header() {
+type ComponentProps = {
+  isScrolled: boolean;
+};
+
+export default function Header(props: ComponentProps) {
   return (
-    <header className={styles.header}>
+    <header
+      className={`${styles.header} ${props.isScrolled ? styles.scrolled : ""}`}
+    >
       <nav>
         <ul className={styles.links}>
           <li style={linkStyles}>
