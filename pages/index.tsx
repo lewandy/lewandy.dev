@@ -1,10 +1,10 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Layout.module.css";
 import Header from "../components/Header";
-import Main from "../components/Main";
+import Home from "../components/Home";
 import Footer from "../components/Footer";
 
-export default function Home() {
+export default function Layout() {
   return (
     <div className={styles.container}>
       <Head>
@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
 
       <Header />
-      <Main />
+      <Home />
       <Footer />
 
     </div>
