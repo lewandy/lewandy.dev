@@ -3,7 +3,6 @@ import styles from "../styles/Header.module.css";
 const linkStyles: React.CSSProperties = {
   fontWeight: "bold",
   boxShadow: "0px 2px #0070F3",
-  marginRight: "4rem",
 };
 
 type ComponentProps = {
