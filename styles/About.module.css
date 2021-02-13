@@ -4,8 +4,8 @@
   display: grid;
   height: 400px;
   color: white;
-  padding-left: 10vh;
-  padding-right: 10vh;
+  padding-left: 20vh;
+  padding-right: 20vh;
   background: #0070f3;
   grid-template-columns: 50% 50%;
 }
@@ -45,6 +45,8 @@
   .container {
     display: flex;
     flex-direction: column;
+    padding-left: 5vh;
+    padding-right: 5vh;
   }
 
   .imageContainer {
