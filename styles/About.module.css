@@ -13,9 +13,41 @@
 .imageContainer {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  padding-right: 10px;
 }
 
 .image {
-  border-radius: 10px;
+  border-radius: 12px;
+  border: 2px solid black;
+  box-shadow: 10px 8px black;
+  height: auto;
+  width: 80%;
+}
+
+.summaryContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.summaryContainer h1 {
+  font-size: 30px;
+  box-shadow: 0px 5px black;
+}
+
+.summaryContainer p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imageContainer {
+    display: none;
+  }
 }
