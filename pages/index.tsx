@@ -4,10 +4,16 @@ import Header from "../components/Header";
 import Home from "../components/Home";
 import Footer from "../components/Footer";
 import About from "../components/About";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 export default function Layout() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+
+  //TODO: use context api to propagate these props
+  const isDesktopOrLaptop = useMediaQuery({
+    query: "(min-device-width: 768px)",
+  });
 
   useEffect(() => {
     const handler = ({ target }: any) => {
