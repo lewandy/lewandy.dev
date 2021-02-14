@@ -4,8 +4,8 @@
   display: grid;
   height: 400px;
   color: white;
-  padding-left: 20vh;
-  padding-right: 20vh;
+  padding-left: 10vh;
+  padding-right: 10vh;
   background: #0070f3;
   grid-template-columns: 50% 50%;
 }
@@ -21,7 +21,7 @@
   border: 2px solid black;
   box-shadow: 10px 8px black;
   height: auto;
-  width: 80%;
+  width: 90%;
 }
 
 .summaryContainer {
@@ -41,7 +41,7 @@
   line-height: 1.6;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .container {
     display: flex;
     flex-direction: column;
