@@ -16,7 +16,7 @@ export default function About() {
         <p>
           I am a Developer passionate for building complete web solutions. I
           mainly focus on front end technologies including but not limited to
-          <strong>Vue</strong> and <strong>React</strong>. I am also proficient
+           <strong>Vue</strong> and <strong>React</strong>. I am also proficient
           in the back end using NodeJs.
         </p>
       </div>
