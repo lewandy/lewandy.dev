@@ -11,7 +11,7 @@ export default function About() {
         />
       </div>
       <div className={styles.summaryContainer}>
-        <h1>Summary</h1>
+        <h1>About</h1>
 
         <p>
           I am a Developer passionate for building complete web solutions. I
