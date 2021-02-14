@@ -9,6 +9,17 @@
   justify-content: flex-end;
 }
 
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.navTitle {
+  color: black;
+}
+
 .scrolled {
   animation-name: blur;
   animation-duration: 1s;

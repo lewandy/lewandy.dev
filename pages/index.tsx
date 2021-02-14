@@ -24,7 +24,6 @@ export default function Layout() {
         <title>Lewandy Diloné Bonifacio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <Header isScrolled={isScrolled} />
       <Home />
       <About />
