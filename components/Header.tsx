@@ -23,10 +23,10 @@ export default function Header(props: ComponentProps) {
             <a href="#about">About</a>
           </li>
           <li style={linkStyles}>
-            <a href="#portfolio">Portfolio</a>
+            <a href="#about">Skills</a>
           </li>
           <li style={linkStyles}>
-            <a href="#contact">Contact</a>
+            <a href="#portfolio">Portfolio</a>
           </li>
         </ul>
       </nav>
