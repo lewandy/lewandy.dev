@@ -6,9 +6,9 @@ import Footer from "../components/Footer";
 import About from "../components/About";
 import { useCallback, useEffect, useState } from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
+import useScroll from "../hooks/useScroll";
 
 export default function Layout() {
-  const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const {
     isBigScreen,
     isDesktopOrLaptop,
@@ -16,23 +16,7 @@ export default function Layout() {
     isTabletOrMobileDevice,
   } = useMediaQuery();
 
-  useEffect(() => {
-    const handler = ({ target }: any) => {
-      const scrollTopPixels: number = target.scrollingElement.scrollTop;
-
-      if (scrollTopPixels > 0 && !isScrolled) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    document.addEventListener("scroll", handler);
-
-    return () => {
-      document.removeEventListener("scroll", handler);
-    };
-  }, []);
+  const { isScrolled } = useScroll();
 
   return (
     <div className={styles.container}>

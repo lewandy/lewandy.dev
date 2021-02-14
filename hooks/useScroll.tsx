@@ -9,9 +9,10 @@ export default function useScroll(): ResponseType {
 
   const handler = ({ target }: any) => {
     const scrollTopPixels: number = target.scrollingElement.scrollTop;
+    const PIXELS_TO_ANIMATE = 20;
 
-    if (scrollTopPixels > 0 && !isScrolled) {
-      setIsScrolled(true);
+    if (scrollTopPixels > PIXELS_TO_ANIMATE) {
+      if (isScrolled == false) setIsScrolled(true);
     } else {
       setIsScrolled(false);
     }
