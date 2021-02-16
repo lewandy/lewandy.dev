@@ -1,7 +1,7 @@
-.main {
-  min-height: 100vh;
-  flex: 1;
+.container {
   display: flex;
+  flex: 1;
+  min-height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -32,4 +32,11 @@
 .description {
   line-height: 1.5;
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding-left: 5vh;
+    padding-right: 5vh;
+  }
 }

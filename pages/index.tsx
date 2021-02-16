@@ -1,10 +1,12 @@
 import Head from "next/head";
+import useScroll from "../hooks/useScroll";
 import styles from "../styles/Layout.module.css";
+
 import Header from "../components/Header";
 import Home from "../components/Home";
 import Footer from "../components/Footer";
 import About from "../components/About";
-import useScroll from "../hooks/useScroll";
+import Skills from "../components/Skills"
 
 export default function Layout() {
   const { isScrolled } = useScroll();
@@ -18,6 +20,7 @@ export default function Layout() {
       <Header isScrolled={isScrolled} />
       <Home />
       <About />
+      <Skills />
       <Footer />
     </div>
   );
