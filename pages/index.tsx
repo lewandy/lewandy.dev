@@ -4,8 +4,6 @@ import Header from "../components/Header";
 import Home from "../components/Home";
 import Footer from "../components/Footer";
 import About from "../components/About";
-import { useCallback, useEffect, useState } from "react";
-import useMediaQuery from "../hooks/useMediaQuery";
 import useScroll from "../hooks/useScroll";
 
 export default function Layout() {
