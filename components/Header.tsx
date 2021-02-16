@@ -11,12 +11,7 @@ type ComponentProps = {
 };
 
 export default function Header(props: ComponentProps) {
-  const {
-    isBigScreen,
-    isDesktopOrLaptop,
-    isTabletOrMobile,
-    isTabletOrMobileDevice,
-  } = useMediaQuery();
+  const { isTabletOrMobile } = useMediaQuery();
 
   return (
     <header
@@ -24,9 +19,11 @@ export default function Header(props: ComponentProps) {
     >
       <nav className={styles.navContainer}>
         <div className={styles.navTitle}>
-          <h1>Lewandy</h1>
+          <h1>Lewandy {isTabletOrMobile}</h1>
         </div>
-        {isDesktopOrLaptop ? (
+        {isTabletOrMobile ? (
+          <div>Hamburger wip</div>
+        ) : (
           <ul className={styles.links}>
             <li style={linkStyles}>
               <a href="#home">Home</a>
@@ -41,8 +38,6 @@ export default function Header(props: ComponentProps) {
               <a href="#portfolio">Portfolio</a>
             </li>
           </ul>
-        ) : (
-          <div>Hamburger wip</div>
         )}
       </nav>
     </header>

@@ -9,13 +9,6 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import useScroll from "../hooks/useScroll";
 
 export default function Layout() {
-  const {
-    isBigScreen,
-    isDesktopOrLaptop,
-    isTabletOrMobile,
-    isTabletOrMobileDevice,
-  } = useMediaQuery();
-
   const { isScrolled } = useScroll();
 
   return (
