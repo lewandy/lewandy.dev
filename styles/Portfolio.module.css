@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  margin-top: 10rem;
+  padding-left: 10vh;
+  padding-right: 10vh;
+}
+
+.container > h1 {
+  box-shadow: 5px 4px black;
+  padding-right: 8px;
+  height: fit-content;
+  width: fit-content;
+}
+
+.list {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.list > div {
+  height: 200px;
+  width: 300px;
+  background: #000;
+  margin-bottom: 3px;
+}

@@ -6,7 +6,8 @@ import Header from "../components/Header";
 import Home from "../components/Home";
 import Footer from "../components/Footer";
 import About from "../components/About";
-import Skills from "../components/Skills"
+import Skills from "../components/Skills";
+import Porfolio from "../components/Porfolio";
 
 export default function Layout() {
   const { isScrolled } = useScroll();
@@ -21,6 +22,7 @@ export default function Layout() {
       <Home />
       <About />
       <Skills />
+      <Porfolio />
       <Footer />
     </div>
   );

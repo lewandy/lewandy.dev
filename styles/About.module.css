@@ -32,12 +32,12 @@
   flex-direction: column;
 }
 
-.summaryContainer h1 {
+.summaryContainer > h1 {
   font-size: 30px;
   box-shadow: 0px 5px black;
 }
 
-.summaryContainer p {
+.summaryContainer > p {
   font-size: 20px;
   line-height: 1.6;
 }
