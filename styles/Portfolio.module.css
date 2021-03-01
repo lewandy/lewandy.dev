@@ -22,9 +22,8 @@
   flex-wrap: wrap;
 }
 
-.list > div {
-  height: 200px;
-  width: 300px;
-  background: #000;
-  margin-bottom: 3px;
+@media screen and (max-width: 1024px) {
+  .container {
+    align-items: center;
+  }
 }

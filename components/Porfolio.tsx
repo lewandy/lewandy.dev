@@ -1,20 +1,39 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/Portfolio.module.css";
+import PortfolioItem from "./PortfolioItem";
+
+const API_REPOSITORIES =
+  "https://gh-pinned-repos-5l2i19um3.vercel.app/?username=lewandy";
+
+export type StarredRepository = {
+  description: string;
+  forks: number;
+  language: string;
+  link: string;
+  owner: string;
+  repo: string;
+  stars: string;
+};
+
+const renderRepository = (repository: StarredRepository) => {
+  return <PortfolioItem key={repository.repo} item={repository} />;
+};
 
 export default function Portfolio() {
+  const [repositories, setRepositories] = useState<StarredRepository[]>([]);
+
   useEffect(() => {
-    //Call to api
+    fetch(API_REPOSITORIES)
+      .then((response) => response.json())
+      .then((data) => {
+        setRepositories(data);
+      });
   }, []);
 
   return (
     <section id="portfolio" className={styles.container}>
       <h1>Projects</h1>
-      <div className={styles.list}>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-      </div>
+      <div className={styles.list}>{repositories.map(renderRepository)}</div>
     </section>
   );
 }

@@ -1,0 +1,26 @@
+.container {
+  height: auto;
+  width: 300px;
+  margin-bottom: 3px;
+  padding: auto;
+}
+
+.container > ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 30px;
+}
+
+.link {
+  padding: 8px;
+  background-color: #0070f3;
+  color: whitesmoke;
+  border-radius: 8px;
+  box-shadow: 3px 4px 10px rgb(200, 199, 199);
+}
