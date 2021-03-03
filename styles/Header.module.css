@@ -5,7 +5,6 @@
   display: flex;
   padding-right: 10%;
   padding-left: 10%;
-  position: fixed;
   justify-content: flex-end;
 }
 
@@ -56,6 +55,13 @@
   animation-name: effect;
   animation-duration: 800ms;
   animation-fill-mode: forwards;
+}
+
+@media screen and (min-width: 1440px) {
+  .header {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
 }
 
 @keyframes effect {

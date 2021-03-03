@@ -7,6 +7,19 @@
   align-items: center;
 }
 
+.button {
+  padding: 10px;
+  height: 50px;
+  width: 140px;
+  font-size: medium;
+  border-radius: 8px;
+  background-color: #0070f3;
+  font-weight: 600;
+  border-width: 0px;
+  cursor: pointer;
+  color: white;
+}
+
 .title a {
   color: #0070f3;
   text-decoration: none;

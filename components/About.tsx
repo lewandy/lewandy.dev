@@ -11,8 +11,8 @@ export default function About() {
 
         <p>
           I am a Developer with <strong>strong</strong> skills in building web
-          applications with
-          <strong>Javascript.</strong> I mainly focus on front-end technologies
+          applications with 
+          <strong> Javascript.</strong> I mainly focus on front-end technologies
           including but not limited to Vue and React. I am also proficient in
           the back end using Node.
         </p>

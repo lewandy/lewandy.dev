@@ -1,5 +1,7 @@
+import { useState } from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
 import styles from "../styles/Header.module.css";
+import HamburgerMenu from "./HamburgerMenu";
 
 const linkStyles: React.CSSProperties = {
   fontWeight: "bold",
@@ -11,7 +13,8 @@ type ComponentProps = {
 };
 
 export default function Header(props: ComponentProps) {
-  const { isTabletOrMobile } = useMediaQuery();
+  const { isDesktopOrLaptop } = useMediaQuery();
+  const [isOpen, setIsOpen] = useState<Boolean>(false);
 
   return (
     <header
@@ -21,8 +24,21 @@ export default function Header(props: ComponentProps) {
         <div className={styles.navTitle}>
           <h1>Lewandy Dilone.</h1>
         </div>
-        {isTabletOrMobile ? (
-          <div>Hamburger wip</div>
+
+        {!isDesktopOrLaptop ? (
+          <HamburgerMenu
+            isOpen={isOpen}
+            menuClicked={() => {
+              setIsOpen(!isOpen);
+            }}
+            width={18}
+            height={15}
+            strokeWidth={1}
+            rotate={0}
+            color="black"
+            borderRadius={0}
+            animationDuration={0.5}
+          />
         ) : (
           <ul className={styles.links}>
             <li style={linkStyles}>
