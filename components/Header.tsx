@@ -19,7 +19,7 @@ export default function Header(props: ComponentProps) {
     >
       <nav className={styles.navContainer}>
         <div className={styles.navTitle}>
-          <h1>Lewandy {isTabletOrMobile}</h1>
+          <h1>Lewandy Dilone.</h1>
         </div>
         {isTabletOrMobile ? (
           <div>Hamburger wip</div>

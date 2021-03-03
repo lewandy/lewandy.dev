@@ -22,7 +22,6 @@ export default function Layout() {
       <Home />
       <About />
       <Skills />
-      <Porfolio />
       <Footer />
     </div>
   );

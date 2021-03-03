@@ -4,8 +4,8 @@
   display: grid;
   height: 400px;
   color: white;
-  padding-left: 10vh;
-  padding-right: 10vh;
+  padding-left: 10%;
+  padding-right: 10%;
   background: #0070f3;
   grid-template-columns: 50% 50%;
 }
