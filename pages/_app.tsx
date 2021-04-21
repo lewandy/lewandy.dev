@@ -1,11 +1,11 @@
 import '../styles/globals.css'
 
-type AppComponentProps = {
+type Pros = {
   Component : any,
   pageProps: any
 }
 
-function MyApp({ Component, pageProps }: AppComponentProps) {
+function MyApp({ Component, pageProps }: Pros) {
   return <Component {...pageProps} />
 }
 
