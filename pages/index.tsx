@@ -7,7 +7,6 @@ import Home from "../components/Home";
 import Footer from "../components/Footer";
 import About from "../components/About";
 import Skills from "../components/Skills";
-import Porfolio from "../components/Porfolio";
 
 export default function Layout() {
   const { isScrolled } = useScroll();
@@ -15,7 +14,7 @@ export default function Layout() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Lewandy Diloné Bonifacio</title>
+        <title>Lewandy Diloné</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header isScrolled={isScrolled} />
