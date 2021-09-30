@@ -9,7 +9,9 @@ export default function Home() {
 
       <p className={styles.description}>Front End Engineer 🚀</p>
       <div>
-        <button className={styles.button}>Contact Me</button>
+        <a href="mailto: lewandydilone@gmail.com" className={styles.button}>
+          Get In Touch
+        </a>
       </div>
     </section>
   );

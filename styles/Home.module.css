@@ -9,15 +9,15 @@
 
 .button {
   padding: 10px;
-  height: 50px;
-  width: 140px;
-  font-size: medium;
   border-radius: 8px;
   background-color: #0070f3;
   font-weight: 600;
-  border-width: 0px;
   cursor: pointer;
   color: white;
+}
+
+.button:hover {
+  box-shadow: 5px 5px gray;
 }
 
 .title a {

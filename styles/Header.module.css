@@ -1,5 +1,4 @@
 .header {
-  position: fixed;
   top: 0;
   width: 100%;
   height: 60px;
@@ -20,20 +19,6 @@
   color: black;
 }
 
-.scrolled {
-  animation-name: blur;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-.scrolled li {
-  border-radius: 8px;
-  color: whitesmoke;
-  animation-name: effect;
-  animation-duration: 800ms;
-  animation-fill-mode: forwards;
-}
-
 .links {
   width: 500px;
   display: flex;
@@ -48,34 +33,4 @@
   padding-top: 5px;
   padding-bottom: 5px;
   font-size: large;
-}
-
-.links li:hover {
-  border-radius: 8px;
-  color: whitesmoke;
-  animation-name: effect;
-  animation-duration: 800ms;
-  animation-fill-mode: forwards;
-}
-
-@media screen and (min-width: 1440px) {
-  .header {
-    padding-left: 20%;
-    padding-right: 20%;
-  }
-}
-
-@keyframes effect {
-  from {
-    color: black;
-  }
-  to {
-    background-color: #0070f3;
-  }
-}
-
-@keyframes blur {
-  to {
-    backdrop-filter: blur(5px);
-  }
 }
