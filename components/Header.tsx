@@ -1,39 +1,52 @@
-import styles from "../styles/Header.module.css";
+import styled from 'styled-components';
 
-const linkStyles: React.CSSProperties = {
-  fontWeight: "bold",
-  boxShadow: "0px 2px #0070F3",
-};
+const TheHeader = styled.header`
+  display: flex;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
 
-type ComponentProps = {
-  isScrolled: boolean;
-};
+  ul {
+    display: flex;
+  }
 
-export default function Header(props: ComponentProps) {
+  ul li {
+    margin-right: 20px;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  nav {
+    font-size: large;
+    font-weight: bold;
+  }
+`;
+
+const Logo = styled.div`
+  font-weight: bold;
+  font-size: large;
+`;
+
+export default function Header() {
   return (
-    <header
-      className={`${styles.header} ${props.isScrolled ? styles.scrolled : ""}`}
-    >
-      <nav className={styles.navContainer}>
-        <div className={styles.navTitle}>
-          <img height="35" width="35" src="/ball.svg" />
-        </div>
-
-        <ul className={styles.links}>
-          <li style={linkStyles}>
-            <a href="#home">Home</a>
+    <TheHeader>
+      <Logo>LEWANDY DILONE</Logo>
+      <nav>
+        <ul>
+          <li>
+            <a href="#home">HOME</a>
           </li>
-          <li style={linkStyles}>
-            <a href="#about">About</a>
+          <li>
+            <a href="#about">ABOUT</a>
           </li>
-          <li style={linkStyles}>
-            <a href="#skills">Skills</a>
-          </li>
-          <li style={linkStyles}>
-            <a href="#portfolio">Portfolio</a>
+          <li>
+            <a href="#stack">TECH STACK</a>
           </li>
         </ul>
       </nav>
-    </header>
+    </TheHeader>
   );
 }
