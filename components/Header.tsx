@@ -28,6 +28,15 @@ const TheHeader = styled.header`
     font-size: large;
     font-weight: bold;
   }
+
+  .contact-me {
+    border: 1px gray solid;
+    border-radius: 12px;
+  }
+
+  .contact-me a {
+    margin: 10px;
+  }
 `;
 
 const Logo = styled.div`
@@ -47,8 +56,8 @@ const Nav = () => (
       <li>
         <a href="#tech">Technologies</a>
       </li>
-      <li>
-        <a href="#stack">Contact me</a>
+      <li className="contact-me">
+        <a href="#contact">Contact me</a>
       </li>
     </ul>
   </nav>

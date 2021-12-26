@@ -1,5 +1,6 @@
-import Head from "next/head";
-import Header from "../components/Header";
+import Head from 'next/head';
+import Header from '../components/Header';
+import Home from '../components/Home';
 
 export default function Layout() {
   return (
@@ -8,7 +9,10 @@ export default function Layout() {
         <title>Lewandy Diloné</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+      <section id="home">
+        <Header />
+        <Home />
+      </section>
     </div>
   );
 }
