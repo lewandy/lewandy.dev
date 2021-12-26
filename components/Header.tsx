@@ -3,9 +3,14 @@ import styled from 'styled-components';
 const TheHeader = styled.header`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 20px;
+
+  @media (min-width: 1024px) {
+    justify-content: space-around;
+  }
 
   ul {
     display: flex;
@@ -30,23 +35,30 @@ const Logo = styled.div`
   font-size: large;
 `;
 
+const Nav = () => (
+  <nav>
+    <ul>
+      <li>
+        <a href="#home">Home</a>
+      </li>
+      <li>
+        <a href="#about">About</a>
+      </li>
+      <li>
+        <a href="#tech">Technologies</a>
+      </li>
+      <li>
+        <a href="#stack">Contact me</a>
+      </li>
+    </ul>
+  </nav>
+);
+
 export default function Header() {
   return (
     <TheHeader>
-      <Logo>LEWANDY DILONE</Logo>
-      <nav>
-        <ul>
-          <li>
-            <a href="#home">HOME</a>
-          </li>
-          <li>
-            <a href="#about">ABOUT</a>
-          </li>
-          <li>
-            <a href="#stack">TECH STACK</a>
-          </li>
-        </ul>
-      </nav>
+      <Logo>Lewandy Diloné</Logo>
+      <Nav />
     </TheHeader>
   );
 }
